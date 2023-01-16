@@ -1,10 +1,11 @@
 import React from "react";
 
-function AppTitle() {
+function PageTitle(props: any) {
     return (
-        <>
-            This is App component
-        </>
+        <h1>
+            {props.title}
+        </h1>
     )
 }
-export default AppTitle;
+
+export default PageTitle;

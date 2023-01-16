@@ -1,9 +1,9 @@
 import React from "react";
 
-const AccordionTitle = () => {
+const AccordionTitle = (props:any) => {
     return (
         <div>
-            <h3>Меню</h3>
+            {props.title}
         </div>
     )
 };

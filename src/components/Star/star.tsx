@@ -1,14 +1,12 @@
 import React from "react";
-
-const Star=()=>{
-   return(
-       <>
-       <div>star</div>
-       <div>star</div>
-       <div>star</div>
-       <div>star</div>
-       <div>star</div>
-       </>
-   )
+// export type StarPropsType={
+//     selected:boolean
+// }
+const Star = (props:any) => {
+    if(props.selected === true){
+        return<span><b> star </b></span>
+    }else{
+        return <span> star </span>
+    }
 };
 export default Star;
