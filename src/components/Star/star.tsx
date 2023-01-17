@@ -1,8 +1,9 @@
 import React from "react";
-// export type StarPropsType={
-//     selected:boolean
-// }
-const Star = (props:any) => {
+export type StarPropsType={
+    selected:boolean
+}
+
+const Star = (props:StarPropsType) => {
     if(props.selected === true){
         return<span><b> star </b></span>
     }else{

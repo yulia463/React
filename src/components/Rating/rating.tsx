@@ -1,7 +1,10 @@
 import React from "react";
 import Star from "../Star/star";
 
-const Rating = (props: any) => {
+export type RatingPropsType = {
+    value: 0 | 1 | 2 | 3 | 4 | 5
+}
+const Rating = (props: RatingPropsType) => {
     if (props.value === 1) {
         return (
             <div>
