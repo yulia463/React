@@ -11,8 +11,8 @@ export const Uncontrolledaccordion = (props: AccordionPropsType) => {
     let [collapsed,setCollapsed]= useState(true)
     return (
         <div>
-            <UncontrolledaccordionTitle title={props.titleValue}/>
-            <button onClick={()=> {setCollapsed(!collapsed)}}>Toggle</button>
+            <UncontrolledaccordionTitle title={props.titleValue} onClick={()=> {setCollapsed(!collapsed)}}/>
+
             {!collapsed && <UncontrolledaccordionBody/>}
         </div>
     )
