@@ -4,7 +4,7 @@ export type AccordionTitlePropsType={
 }
 const AccordionTitle = (props:AccordionTitlePropsType) => {
     return (
-        <h3>
+        <h3 >
            --- {props.title} ---
         </h3>
     )

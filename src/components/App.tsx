@@ -11,12 +11,13 @@ import Star from "./Star/star";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let[accordionCollapsed,setAccordionCollapsed]=useState<boolean>(false)
     return (
         <div>
             <PageTitle title={"This is App component"}/>
             <PageTitle title={"My friends"}/>
             Article 1
-            <Accordion titleValue={"menu"} collapsed={true}/>
+            <Accordion titleValue={"menu"} collapsed={accordionCollapsed} onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
             Article 2
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
