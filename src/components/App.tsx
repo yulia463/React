@@ -7,7 +7,7 @@ import {OnOff} from "./OnOff/OnOff";
 import {Uncontrolledaccordion} from "./UncontrolledAccordion/Uncontrolledaccordion";
 import Unncontralledrating from "./UnncontralledRating/Unncontralledrating";
 import {UncontrolledOnOff} from "./UncontrolledOnOff/UncontrolledOnOff";
-import {DifficultCountingExample} from "./UseMemo/UseMemo";
+import {DifficultCountingExample, HelpsForReactMemo} from "./UseMemo/UseMemo";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
@@ -33,6 +33,7 @@ function App() {
             {/*<OnOff onChange={setSwitchOn} on={switchOn}/>*/}
             {/*<UncontrolledOnOff onChange={setSwitchOn}/>*/}
             <DifficultCountingExample/>
+            <HelpsForReactMemo/>
         </div>
     );
 }

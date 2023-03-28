@@ -45,29 +45,41 @@ const UsersSecret =(props:{users:Array<string>})=>{
     }</div>
 }
 
-let Users = React.memo(UsersSecret)
+//let Users = React.memo(UsersSecret)
 
 export const HelpsForReactMemo = () => {
 
     const [counter, setCounter] = useState<number>(0);
-    const [users, setUsers] = useState <Array<string>>(['Yulia','Valera','Sveta','Tanya']);
+    const [books, setBooks] = useState <Array<string>>(['Yulia','Valera','Sveta','Tanya']);
 
    const newArray :any= useMemo(()=>{
-       users.filter(u=>u.toLowerCase().indexOf('a')> -1)
+       books.filter(books=>books.toLowerCase().indexOf('a')> -1)
        return newArray
    },[])
 
-const addUser = ()=>{
-       const newUsers = [...users,'Oleg' + new Date().getTime()];
-       setUsers(newUsers)
+const addBook = ()=>{
+       const newBooks = [...books,'Oleg' + new Date().getTime()];
+       setBooks(newBooks)
 }
 
 
     return (
         <>
             <button onClick={()=>{setCounter(counter+1)}}>+</button>
-            <button onClick={()=>{addUser()}}>add user</button>
+            <button onClick={()=>{addBook()}}>add user</button>
+            {counter}
+            <Book books={newArray} addBook={addBook} />
 
         </>
     )
 }
+
+const BooksSecret =(props:{books:Array<string>;addBook:()=>void})=>{
+    return <div>
+        <button onClick={()=>{props.addBook()}}>addBook</button>
+        {
+        props.books.map((book,i)=><div key={i}>{book}</div>)
+    }</div>
+}
+
+let Book = React.memo(BooksSecret)
